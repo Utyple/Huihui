@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You be Mine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 48px;
+            color: #ff66b2;
+        }
+        .buttons {
+            margin-top: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 24px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+            transition: 0.3s;
+        }
+        #yesBtn {
+            background-color: #66cc66;
+            color: cyan;
+        }
+        #yesBtn:hover {
+            background-color: #4CAF50;
+        }
+        #noBtn {
+            background-color: #ff6666;
+            color: pink;
+            position: relative;
+        }
+        #noBtn:hover {
+            background-color: #ff1a1a;
+            top: 100px;
+            left: 100px;
+            transition: all 0.5s ease;
+        }
+        p {
+            font-size: 28px;
+            color: #666;
+            margin-top: 100px;
+        }
+        .images {
+            margin-top: 30px;
+        }
+        .images img {
+            width: 110px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 4px solid #ff66b2;
+            transition: transform 0.3s ease;
+        }
+        .images img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You be Mine?</h1> 
+
+    <div class="images">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="Cute image 1">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/bridge-1280633_1280.jpg" alt="Cute image 2">
+        <img src="https://cdn.pixabay.com/photo/2015/12/08/00/32/green-1081860_1280.jpg" alt="Cute image 3">
+    </div> 
+
+    <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div> 
+
+    <p>(Hint: No Nahi kah skte chup chap haan bolo!)</p> 
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        noBtn.addEventListener('mouseover', function() {
+            noBtn.style.top = Math.random() * 200 + "px";
+            noBtn.style.left = Math.random() * 200 + "px";
+        });
+    </script>
+</body>
+</html>
